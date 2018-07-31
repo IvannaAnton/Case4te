@@ -1,5 +1,5 @@
 package com.SkywareInventory.tests;
-//just adding comment Ivanna
+
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
