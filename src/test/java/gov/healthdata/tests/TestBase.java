@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeTest;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.github.javafaker.Faker;
 
 import gov.healthdata.utilities.BrowserUtils;
 import gov.healthdata.utilities.ConfigurationReader;
@@ -22,11 +23,20 @@ import gov.healthdata.utilities.Driver;
 
 
 	public abstract class TestBase {
+		protected Faker faker = new Faker();
+		protected String email;
+		protected String actual;
+		protected String expected;
+		protected String password1 = faker.internet().password();
+		protected String userId = ConfigurationReader.getProperty("username");
+		protected String password = ConfigurationReader.getProperty("password");
+		
 		protected WebDriver driver;
-	    protected Actions actions;
-	    protected ExtentReports report;
-	    protected ExtentHtmlReporter htmlReporter;
-	    protected ExtentTest extentLogger;
+		protected Actions actions;
+		
+		protected ExtentReports report;
+		protected ExtentHtmlReporter htmlReporter;
+		protected ExtentTest extentLogger;
 	    
 	    @BeforeTest
 	    public void setUpTest() {
@@ -52,7 +62,7 @@ import gov.healthdata.utilities.Driver;
 	        driver.manage().window().fullscreen();
 	        driver.get(ConfigurationReader.getProperty("url"));
 	    }
-	   @AfterMethod(alwaysRun = true)
+	 //  @AfterMethod(alwaysRun = true)
 	    public void tearDown(ITestResult result) throws IOException {
 	        // checking if the test method failed
 	        if (result.getStatus() == ITestResult.FAILURE) {
@@ -72,7 +82,7 @@ import gov.healthdata.utilities.Driver;
 	        }
 	        Driver.closeDriver();
 	    }
-	    @AfterTest
+	  //  @AfterTest
 	    public void tearDownTest() {
 	        report.flush();
 	    }

@@ -18,20 +18,25 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	public HealthDataSearchResultPage() {
 	PageFactory.initElements(Driver.getDriver(), this);
 	}
+
 	
+	@FindBy (xpath="(//h2[@class='pane-title ctools-collapsible-handle'])[3]") 
+	public WebElement tags;
 	
+	@FindBy (xpath="//a[@id='facetapi-link--80']") 
+	public WebElement medicaidLink;
+  
+	@FindBy(xpath="//a[@id='anch_20']")
+	public WebElement homepage;
+
 	@FindBy (className="view-header") 
 	public WebElement searchResultNumber;
 	
 	@FindBy (className="view-empty") 
 	public WebElement notFoundMessage;
 	
-	@FindBy (xpath="(//h2[@class='pane-title ctools-collapsible-handle'])[3]") 
-	public WebElement tags;
-	
 	@FindBy (xpath="//ul[@id='facetapi-facet-search-apidatasets-block-field-tags']/li") 
-	public List<WebElement> tagsOptions;
-	
+	public List<WebElement> tagsOptions;	
 	
 	@FindBy (xpath="//a[@id='facetapi-link--80']") 
 	public WebElement medicaidLink;
@@ -40,10 +45,17 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	public WebElement homepage;
 	
 	@FindBy(id="edit-query")
-	public WebElement searchResultHealth;  
+	public WebElement searchResultHealth; 
 	
 	@FindBy(xpath="//*[@id=\"facetapi-link\"]")
-	public WebElement beforeresultFiltreHealthOfHealth;   
+	public WebElement beforeresultFiltreHealthOfHealth;  
+	
+	@FindBy(id="facetapi-link")
+	public WebElement healthClick;  
+	
+	@FindBy(xpath="//div[@class='view-header']")
+	public WebElement resultFiltreHealthOfHealth; 
+	  
 	
 	@FindBy(id="facetapi-link")
 	public WebElement healthClick; 
@@ -51,8 +63,10 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	@FindBy(xpath="//a[@id='facetapi-link--6']")
 	public WebElement hospitalClick;  
 	
-	@FindBy(xpath="//div[@class='view-header']")
-	public WebElement resultfiltrehospital; 
+	@FindBy(xpath="//div[@class='view-empty']/p")
+	public WebElement noResults;  
+   
+
 	
 	
 	
