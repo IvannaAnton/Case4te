@@ -18,13 +18,13 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	}
 	
 	
-	@FindBy (xpath="//div[@class='view-header']") //by Khaliunaa
+	@FindBy (xpath="//div[@class='view-header']") 
 	public WebElement searchResultNumber;
 	
-	@FindBy (xpath="(//h2[@class='pane-title ctools-collapsible-handle'])[3]") //by Khaliunaa
+	@FindBy (xpath="(//h2[@class='pane-title ctools-collapsible-handle'])[3]") 
 	public WebElement tags;
 	
-	@FindBy (xpath="//a[@id='facetapi-link--80']") //Khaliunaa
+	@FindBy (xpath="//a[@id='facetapi-link--80']") 
 	public WebElement medicaidLink;
 	@FindBy(xpath="//a[@id='anch_20']")
 	public WebElement homepage;
@@ -33,22 +33,25 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	
 	
 	@FindBy(id="edit-query")
-	public WebElement searchResultHealth;  // by KimyaNur
+	public WebElement searchResultHealth; 
 	
 	@FindBy(xpath="//*[@id=\"facetapi-link\"]")
-	public WebElement beforeresultFiltreHealthOfHealth;    // by KimyaNur
+	public WebElement beforeresultFiltreHealthOfHealth;  
 	
 	@FindBy(id="facetapi-link")
-	public WebElement healthClick;  // by KimyaNur
+	public WebElement healthClick;  
 	
 	@FindBy(xpath="//div[@class='view-header']")
-	public WebElement resultFiltreHealthOfHealth;  // by KimyaNur
+	public WebElement resultFiltreHealthOfHealth;  
 	
 	@FindBy(xpath="//a[@id='facetapi-link--6']")
-	public WebElement hospitalClick;  // by KimyaNur
+	public WebElement hospitalClick;  
 	
 	@FindBy(xpath="//div[@class='view-header']")
-	public WebElement resultfiltrehospital;  // by KimyaNur
+	public WebElement resultfiltrehospital;  
+	
+	@FindBy(xpath="//div[@class='view-empty']/p")
+	public WebElement noResults;  
 	
 	
 	
