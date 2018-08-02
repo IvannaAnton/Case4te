@@ -38,12 +38,7 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	@FindBy (xpath="//ul[@id='facetapi-facet-search-apidatasets-block-field-tags']/li") 
 	public List<WebElement> tagsOptions;	
 	
-	@FindBy (xpath="//a[@id='facetapi-link--80']") 
-	public WebElement medicaidLink;
-	
-	@FindBy(xpath="//a[@id='anch_20']")
-	public WebElement homepage;
-	
+
 	@FindBy(id="edit-query")
 	public WebElement searchResultHealth; 
 	
@@ -55,10 +50,7 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	
 	@FindBy(xpath="//div[@class='view-header']")
 	public WebElement resultFiltreHealthOfHealth; 
-	  
 	
-	@FindBy(id="facetapi-link")
-	public WebElement healthClick; 
 	
 	@FindBy(xpath="//a[@id='facetapi-link--6']")
 	public WebElement hospitalClick;  
