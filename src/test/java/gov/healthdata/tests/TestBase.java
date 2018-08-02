@@ -1,4 +1,4 @@
-package com.SkywareInventory.tests;
+package gov.healthdata.tests;
 //just adding comment Ivanna/master
 
 import java.io.IOException;
@@ -12,12 +12,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
-import com.SkywareInventory.utility.BrowserUtils;
-import com.SkywareInventory.utility.ConfigurationReader;
-import com.SkywareInventory.utility.Driver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
+import gov.healthdata.utilities.BrowserUtils;
+import gov.healthdata.utilities.ConfigurationReader;
+import gov.healthdata.utilities.Driver;
 
 
 	public abstract class TestBase {
