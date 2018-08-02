@@ -1,5 +1,7 @@
 package gov.healthdata.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,38 +20,39 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	}
 	
 	
-	@FindBy (xpath="//div[@class='view-header']") //by Khaliunaa
+	@FindBy (className="view-header") 
 	public WebElement searchResultNumber;
 	
-	@FindBy (xpath="(//h2[@class='pane-title ctools-collapsible-handle'])[3]") //by Khaliunaa
+	@FindBy (className="view-empty") 
+	public WebElement notFoundMessage;
+	
+	@FindBy (xpath="(//h2[@class='pane-title ctools-collapsible-handle'])[3]") 
 	public WebElement tags;
 	
-	@FindBy (xpath="//a[@id='facetapi-link--80']") //Khaliunaa
+	@FindBy (xpath="//ul[@id='facetapi-facet-search-apidatasets-block-field-tags']/li") 
+	public List<WebElement> tagsOptions;
+	
+	
+	@FindBy (xpath="//a[@id='facetapi-link--80']") 
 	public WebElement medicaidLink;
 	
 	@FindBy(xpath="//a[@id='anch_20']")
 	public WebElement homepage;
 	
-	
-	
-	
 	@FindBy(id="edit-query")
-	public WebElement searchResultHealth;  // by KimyaNur
+	public WebElement searchResultHealth;  
 	
 	@FindBy(xpath="//*[@id=\"facetapi-link\"]")
-	public WebElement beforeresultFiltreHealthOfHealth;    // by KimyaNur
+	public WebElement beforeresultFiltreHealthOfHealth;   
 	
 	@FindBy(id="facetapi-link")
-	public WebElement healthClick;  // by KimyaNur
-	
-	@FindBy(xpath="//div[@class='view-header']")
-	public WebElement resultFiltreHealthOfHealth;  // by KimyaNur
+	public WebElement healthClick; 
 	
 	@FindBy(xpath="//a[@id='facetapi-link--6']")
-	public WebElement hospitalClick;  // by KimyaNur
+	public WebElement hospitalClick;  
 	
 	@FindBy(xpath="//div[@class='view-header']")
-	public WebElement resultfiltrehospital;  // by KimyaNur
+	public WebElement resultfiltrehospital; 
 	
 	
 	

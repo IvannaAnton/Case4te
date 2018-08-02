@@ -17,5 +17,9 @@ public class HealthDataMainPage {
 	@FindBy(id="edit-submit")
 	public WebElement searchButton;
 	
+	@FindBy(xpath="//img[@alt='Home']")
+	public WebElement homePage;
+	
+	
 
 }
