@@ -62,7 +62,7 @@ import gov.healthdata.utilities.Driver;
 	       // driver.manage().window().fullscreen();
 	        driver.get(ConfigurationReader.getProperty("url"));
 	    }
-	 //  @AfterMethod(alwaysRun = true)
+	   @AfterMethod(alwaysRun = true)
 	    public void tearDown(ITestResult result) throws IOException {
 	        // checking if the test method failed
 	        if (result.getStatus() == ITestResult.FAILURE) {
@@ -82,7 +82,7 @@ import gov.healthdata.utilities.Driver;
 	        }
 	        Driver.closeDriver();
 	    }
-	  //  @AfterTest
+	    @AfterTest
 	    public void tearDownTest() {
 	        report.flush();
 	    }

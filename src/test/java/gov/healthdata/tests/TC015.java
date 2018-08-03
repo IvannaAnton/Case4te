@@ -3,12 +3,13 @@ package gov.healthdata.tests;
 import org.openqa.selenium.Keys;
 
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import gov.healthdata.pages.HealthDataMainPage;
 import gov.healthdata.utilities.ConfigurationReader;
 
 public class TC015 extends TestBase{
-
+	@Test(priority = 15, groups= {"smoke"})
 	public void TryPressingEnterKkeyInsteadOfClickingSearchButton() {
 		
 		driver.get(ConfigurationReader.getProperty("url"));
