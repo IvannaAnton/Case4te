@@ -9,10 +9,9 @@ import gov.healthdata.utilities.ConfigurationReader;
 
 public class TC002 extends TestBase {
 	
-	@Test(priority = 2)
+	@Test(priority = 2, groups= {"smoke"})
 	public void verifySearchBoxInHomePageTest() {
 		
-		extentLogger = report.createTest("Verify search box is located on the Home Page");
 		driver.get(ConfigurationReader.getProperty("url"));
 		actual =driver.getTitle();
 		expected = "HealthData.gov";

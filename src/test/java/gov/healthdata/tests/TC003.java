@@ -18,7 +18,7 @@ public class TC003 extends TestBase {
 	HealthDataMainPage mainPage;
 	HealthDataSearchResultPage searchPage;
 	
-	@Test
+	@Test(priority = 3, groups= {"smoke"})
 	public void searchFanctionalityPositive() {
 		mainPage= new HealthDataMainPage();
 		assertTrue(Driver.getDriver().getCurrentUrl().contains("www.healthdata.gov"));
