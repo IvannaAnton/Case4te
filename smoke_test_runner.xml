@@ -9,9 +9,10 @@
 		</groups>
 
 		<classes>
+			<class name="gov.healthdata.tests.TC001"></class>
 			<class name="gov.healthdata.tests.TC002"></class>
 			<class name="gov.healthdata.tests.TC003"></class>
-			<class name="gov.healthdata.tests.TC012"></class>
+			<class name="gov.healthdata.tests.TC015"></class>
 
 		</classes>
 	</test>
