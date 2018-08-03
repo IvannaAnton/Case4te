@@ -9,7 +9,7 @@ import gov.healthdata.utilities.ConfigurationReader;
 
 public class TC012 extends TestBase {
 
-	@Test
+	@Test(priority = 12, groups= {"smoke"})
 	public void VerifyTheResultMatchFiltertTopic() {
 		//1 Go to www.healthdata.gov URL.
 		driver.get(ConfigurationReader.getProperty("url"));

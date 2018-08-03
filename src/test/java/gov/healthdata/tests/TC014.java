@@ -15,7 +15,7 @@ public class TC014 extends TestBase {
 	public void verifySearchFunyionalityTest() {
 		
 		
-		extentLogger = report.createTest("Verifying the search functionality with three spaces.");
+		
 		driver.get(ConfigurationReader.getProperty("url"));
 		actual =driver.getTitle();
 		expected = "HealthData.gov";

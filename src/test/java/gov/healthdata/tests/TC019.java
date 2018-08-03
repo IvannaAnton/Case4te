@@ -14,7 +14,7 @@ public class TC019 extends TestBase {
 	@Test(priority = 19)
 	public void verifySearchBoxTest() {
 		
-		extentLogger = report.createTest("Verify is the search box offer typo corrections for the search query...Fail");
+	
 		driver.get(ConfigurationReader.getProperty("url"));
 		actual =driver.getTitle();
 		expected = "HealthData.gov";

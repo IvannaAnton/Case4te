@@ -1,20 +1,25 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Smoke tests" verbose="2">
 
-
-	<test name="smoke test">
+	<test name="Smoke tests">
 		<groups>
 			<run>
 				<include name="smoke"></include>
 			</run>
 		</groups>
-		<classes>
-			<class name="com.SkywareInventory.tests.TC003_StartFREEbutton"></class>
-			<class name="com.SkywareInventory.tests.TC006_LoginTest1PositiveScenario"></class>
-			<class name="com.SkywareInventory.tests.TC013_Dashboard_EditContactInfo"></class>
-		</classes>
 
-	
+		<classes>
+			<class name="gov.healthdata.tests.TC002"></class>
+			<class name="gov.healthdata.tests.TC003"></class>
+			<class name="gov.healthdata.tests.TC012"></class>
+
+		</classes>
 	</test>
 
+
 </suite>
+
+
+
+
+
