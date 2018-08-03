@@ -3,10 +3,27 @@ package gov.healthdata.tests;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.util.Random;
+
 import org.testng.annotations.Test;
 
+import gov.healthdata.pages.HealthDataMainPage;
+import gov.healthdata.pages.HealthDataSearchResultPage;
 
+public class TC006 extends TestBase {
+	HealthDataMainPage mainPage;
 
-public class TC006 extends TestBase{
-	  
+	@Test
+	public void verifyingTheMaximumCapacityOfTheCharactersInTheSearchBox() {
+		
+		mainPage = new HealthDataMainPage();
+		
+		int maxLetters=128;
+		String maxLengthCharacters = faker.lorem().characters(maxLetters);
+		
+		mainPage.searchField.sendKeys(maxLengthCharacters);
+
+		assertTrue(mainPage.searchField.getAttribute("value").length()==maxLetters);
+
+	}
 }
