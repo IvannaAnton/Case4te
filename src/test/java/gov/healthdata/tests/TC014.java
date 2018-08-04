@@ -1,12 +1,14 @@
 package gov.healthdata.tests;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.Test;
 
 import gov.healthdata.pages.HealthDataMainPage;
 import gov.healthdata.pages.HealthDataSearchResultPage;
 import gov.healthdata.utilities.ConfigurationReader;
+import gov.healthdata.utilities.Driver;
 
 public class TC014 extends TestBase {
 	
@@ -15,11 +17,8 @@ public class TC014 extends TestBase {
 	public void verifySearchFunyionalityTest() {
 		
 		
-		extentLogger = report.createTest("Verifying the search functionality with three spaces.");
-		driver.get(ConfigurationReader.getProperty("url"));
-		actual =driver.getTitle();
-		expected = "HealthData.gov";
-		assertEquals(expected, actual);
+		
+		assertTrue(Driver.getDriver().getCurrentUrl().contains("www.healthdata.gov"));
 		HealthDataMainPage hdMainPage = new HealthDataMainPage();
 		hdMainPage.searchField.sendKeys("zxcvbnsdfghj");
 		hdMainPage.searchButton.click();

@@ -11,6 +11,7 @@ public class HealthDataMainPage {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	
+	
 	@FindBy(id="edit-search")
 	public WebElement searchField;
 	
