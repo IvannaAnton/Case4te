@@ -37,7 +37,6 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	
 	@FindBy (xpath="//ul[@id='facetapi-facet-search-apidatasets-block-field-tags']/li") 
 	public List<WebElement> tagsOptions;	
-	
 
 	@FindBy(id="edit-query")
 	public WebElement searchResultHealth; 
