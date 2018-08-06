@@ -12,16 +12,18 @@ import gov.healthdata.utilities.ConfigurationReader;
 import gov.healthdata.utilities.Driver;
 
 public class TC019 extends TestBase {
+	HealthDataMainPage hdMainPage;
+	HealthDataSearchResultPage searchPage;
 	
 	@Test
 	public void verifySearchBoxTest() {
 		
 	
 		assertTrue(Driver.getDriver().getCurrentUrl().contains("www.healthdata.gov"));
-		HealthDataMainPage hdMainPage = new HealthDataMainPage();
+	    hdMainPage = new HealthDataMainPage();
 		hdMainPage.searchField.sendKeys("halth");
 		hdMainPage.searchButton.click();
-		HealthDataSearchResultPage searchPage = new HealthDataSearchResultPage();
+	    searchPage = new HealthDataSearchResultPage();
 		actual = searchPage.searchResultHealth.getAttribute("value");
 		expected = "health";
 		assertNotEquals(expected,actual);

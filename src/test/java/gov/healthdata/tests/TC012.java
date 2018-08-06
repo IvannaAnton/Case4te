@@ -8,6 +8,8 @@ import gov.healthdata.pages.HealthDataSearchResultPage;
 import gov.healthdata.utilities.ConfigurationReader;
 
 public class TC012 extends TestBase {
+	HealthDataMainPage healthDataMainPage;
+	HealthDataSearchResultPage healthDataSearchResultPage;
 
 	@Test
 	public void VerifyTheResultMatchFiltertTopic() {
@@ -16,13 +18,13 @@ public class TC012 extends TestBase {
 		Assert.assertEquals(driver.getTitle(), "HealthData.gov");
 		
 		//2Input valid data in the search box.
-		HealthDataMainPage healthDataMainPage = new HealthDataMainPage();
+		 healthDataMainPage = new HealthDataMainPage();
 		
 		String search = "group";
 		healthDataMainPage.searchField.sendKeys(search);
 	//3 Click "Search" button.
 		healthDataMainPage.searchButton.click();
-		HealthDataSearchResultPage healthDataSearchResultPage = new HealthDataSearchResultPage();
+		 healthDataSearchResultPage = new HealthDataSearchResultPage();
 		//4Varify the filter "topic" total count match the search count result.
 			System.out.println(healthDataSearchResultPage.searchResultHealth.getText().equals(search));
 	

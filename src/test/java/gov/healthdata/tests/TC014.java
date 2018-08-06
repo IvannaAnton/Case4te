@@ -12,17 +12,18 @@ import gov.healthdata.utilities.Driver;
 
 public class TC014 extends TestBase {
 	
-	
+	HealthDataMainPage hdMainPage;
+	HealthDataSearchResultPage searchPage;
 	@Test
 	public void verifySearchFunyionalityTest() {
 		
 		
 		
 		assertTrue(Driver.getDriver().getCurrentUrl().contains("www.healthdata.gov"));
-		HealthDataMainPage hdMainPage = new HealthDataMainPage();
+	    hdMainPage = new HealthDataMainPage();
 		hdMainPage.searchField.sendKeys("zxcvbnsdfghj");
 		hdMainPage.searchButton.click();
-		HealthDataSearchResultPage searchPage = new HealthDataSearchResultPage();
+		searchPage = new HealthDataSearchResultPage();
 		actual = searchPage.noResults.getText();
 		expected = "No results were found. Please try another keyword.";
 		assertEquals(expected, actual);
