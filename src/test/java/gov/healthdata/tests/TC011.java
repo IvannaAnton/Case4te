@@ -10,7 +10,7 @@ import gov.healthdata.pages.HealthDataSearchResultPage;
 
 public class TC011 extends TestBase {
 	
-	@Test (priority=11)
+	@Test 
 	public void VerifyTheResultMatchFilterTopicResult(){
 		HealthDataMainPage mainPage =  new HealthDataMainPage();
 		HealthDataSearchResultPage resultPage = new HealthDataSearchResultPage();

@@ -13,7 +13,7 @@ import gov.healthdata.utilities.Driver;
 
 public class TC019 extends TestBase {
 	
-	@Test(priority = 19)
+	@Test
 	public void verifySearchBoxTest() {
 		
 	

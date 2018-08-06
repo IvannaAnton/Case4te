@@ -10,7 +10,7 @@ import gov.healthdata.utilities.Driver;
 
 public class TC002 extends TestBase {
 	
-	@Test(priority = 2, groups= {"smoke"})
+	@Test( groups= {"smoke"})
 	public void verifySearchBoxInHomePageTest() {
 		
 		
