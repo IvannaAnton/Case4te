@@ -22,8 +22,8 @@ public class TC006 extends TestBase {
 		String maxLengthCharacters = faker.lorem().characters(maxLetters);
 		
 		mainPage.searchField.sendKeys(maxLengthCharacters);
+    assertTrue(mainPage.searchField.getAttribute("value").length()==maxLetters);
 
-		assertTrue(mainPage.searchField.getAttribute("value").length()==maxLetters);
 
 	}
 }

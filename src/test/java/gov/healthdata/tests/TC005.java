@@ -1,5 +1,6 @@
 package gov.healthdata.tests;
 
+
 import static org.testng.Assert.*;
 
 import org.testng.annotations.Test;
@@ -14,6 +15,7 @@ public class TC005 extends TestBase {
 
 	@Test
 	public void clickTheSearchButtonWithEmptySearchBox() {
+   
 
 		mainPage = new HealthDataMainPage();
 		actual = Driver.getDriver().getCurrentUrl();
@@ -25,5 +27,6 @@ public class TC005 extends TestBase {
 		actual = driver.getTitle();
 		expected = "HealthData.gov";
 		assertEquals(expected, actual);
+
 	}
 }

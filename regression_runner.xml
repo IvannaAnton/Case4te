@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="HealthData Automation" verbose="2">
+
+	<test name="regression tests">
+		<packages>
+			<package name="gov.healthdata.tests"></package>
+		</packages>
+	</test>
+
+</suite>

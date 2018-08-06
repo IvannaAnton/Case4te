@@ -22,6 +22,8 @@ public class TC010 extends TestBase {
 		assertTrue(mainPage.searchField.getAttribute("value").length()==fourteenLetter);
 		assertEquals(maxLengthCharacters, mainPage.searchField.getAttribute("value"));
 
+
+
 	}
 
 }
