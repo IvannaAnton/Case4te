@@ -7,7 +7,7 @@ import gov.healthdata.pages.HealthDataSearchResultPage;
 
 public class TC018 extends TestBase {
 	
-	@Test(priority=18)
+	@Test
 	public void VerifyOptionRightToLeftTypingInSearchBoxFromContextMenu() {
 		HealthDataMainPage mainPage =  new HealthDataMainPage();
 		HealthDataSearchResultPage resultPage = new HealthDataSearchResultPage();

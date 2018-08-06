@@ -10,7 +10,7 @@ import gov.healthdata.pages.HealthDataSearchResultPage;
 
 public class TC007 extends TestBase {
     
-    @Test (priority=7)
+    @Test 
     public void VerifyThatSearchBoxAcceptsCopyPasteCharacters(){
         HealthDataMainPage mainPage =  new HealthDataMainPage();
         HealthDataSearchResultPage resultPage = new HealthDataSearchResultPage();
