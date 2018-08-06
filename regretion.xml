@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regretion Test" verbose="2">
+<test name="Regretion Test">
+		<packages>
+			<package name="gov.healthdata.tests"></package>
+		</packages>
+	</test>
+</suite>
