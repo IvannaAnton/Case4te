@@ -59,7 +59,7 @@ import gov.healthdata.utilities.Driver;
 	        driver = Driver.getDriver();
 	        actions = new Actions(driver);
 	        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
-	        driver.manage().window().fullscreen();
+	       // driver.manage().window().fullscreen();
 	        driver.get(ConfigurationReader.getProperty("url"));
 	    }
 	   @AfterMethod(alwaysRun = true)
