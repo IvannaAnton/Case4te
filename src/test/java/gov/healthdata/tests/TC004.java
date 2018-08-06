@@ -13,7 +13,7 @@ public class TC004  extends TestBase{
 	HealthDataMainPage mainPage;
 	HealthDataSearchResultPage searchPage;
 	
-	@Test
+	@Test(groups="Regretion test")
 	public void searchFanctionalityNegative() {
 		mainPage= new HealthDataMainPage();
 		assertTrue(Driver.getDriver().getCurrentUrl().contains("www.healthdata.gov"));
