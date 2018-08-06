@@ -9,6 +9,7 @@ import gov.healthdata.pages.HealthDataMainPage;
 import gov.healthdata.utilities.ConfigurationReader;
 
 public class TC015 extends TestBase{
+	HealthDataMainPage healthDataMainPage;
 	@Test( groups= {"smoke"})
 	public void TryPressingEnterKkeyInsteadOfClickingSearchButton() {
 		
@@ -16,7 +17,7 @@ public class TC015 extends TestBase{
 		Assert.assertEquals(driver.getTitle(), "HealthData.gov");
 		
 		
-		HealthDataMainPage healthDataMainPage = new HealthDataMainPage();
+	    healthDataMainPage = new HealthDataMainPage();
 		String search = "Health";
 		healthDataMainPage.searchField.sendKeys(search);
 		healthDataMainPage.searchButton.click();

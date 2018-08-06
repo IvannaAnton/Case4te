@@ -9,11 +9,12 @@ import gov.healthdata.pages.HealthDataMainPage;
 import gov.healthdata.pages.HealthDataSearchResultPage;
 
 public class TC011 extends TestBase {
-	
+	HealthDataMainPage mainPage;
+	HealthDataSearchResultPage resultPage;
 	@Test 
 	public void VerifyTheResultMatchFilterTopicResult(){
-		HealthDataMainPage mainPage =  new HealthDataMainPage();
-		HealthDataSearchResultPage resultPage = new HealthDataSearchResultPage();
+	    mainPage =  new HealthDataMainPage();
+	    resultPage = new HealthDataSearchResultPage();
 		mainPage.searchField.sendKeys("health"+Keys.ENTER);
 		resultPage.healthClick.click();
 		int healthResult = Integer.parseInt(resultPage.resultFiltreHealthOfHealth.getText().replaceAll("[^0-9]+", ""));

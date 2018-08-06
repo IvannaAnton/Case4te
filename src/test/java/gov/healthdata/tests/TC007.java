@@ -9,11 +9,12 @@ import gov.healthdata.pages.HealthDataMainPage;
 import gov.healthdata.pages.HealthDataSearchResultPage;
 
 public class TC007 extends TestBase {
-    
+	HealthDataMainPage mainPage ;
+    HealthDataSearchResultPage resultPage ;
     @Test 
     public void VerifyThatSearchBoxAcceptsCopyPasteCharacters(){
-        HealthDataMainPage mainPage =  new HealthDataMainPage();
-        HealthDataSearchResultPage resultPage = new HealthDataSearchResultPage();
+         mainPage =  new HealthDataMainPage();
+        resultPage = new HealthDataSearchResultPage();
         String expected = "health";
         mainPage.searchField.sendKeys(expected+Keys.ENTER);
         String actual = resultPage.searchResultHealth.getAttribute("value");
