@@ -18,7 +18,7 @@ public class TC019 extends TestBase {
 	@Test
 	public void verifySearchBoxTest() {
 		
-	
+		extentLogger = report.createTest("Verify searchbox test");
 		assertTrue(Driver.getDriver().getCurrentUrl().contains("www.healthdata.gov"));
 	    hdMainPage = new HealthDataMainPage();
 		hdMainPage.searchField.sendKeys("halth");

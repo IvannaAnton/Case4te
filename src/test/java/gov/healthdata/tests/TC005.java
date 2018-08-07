@@ -12,7 +12,8 @@ public class TC005 extends TestBase {
 	@Test
 
 	public void clickTheSearchButtonWithEmptySearchBox() {
-   
+		
+	    extentLogger = report.createTest("Verify search button with empty searchbox ");
 		mainPage = new HealthDataMainPage();
 		actual = Driver.getDriver().getCurrentUrl();
 		expected = "www.healthdata.gov";

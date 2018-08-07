@@ -15,6 +15,8 @@ public class TC004  extends TestBase{
 	
 	@Test(groups="Regretion test")
 	public void searchFanctionalityNegative() {
+		
+		extentLogger = report.createTest("Verify search funtionality negative test");
 		mainPage= new HealthDataMainPage();
 		assertTrue(Driver.getDriver().getCurrentUrl().contains("www.healthdata.gov"));
 		mainPage.searchField.sendKeys("sausage");

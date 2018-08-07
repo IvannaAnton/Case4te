@@ -16,6 +16,8 @@ public class TC013 extends TestBase {
 	
 	@Test
 	public void searchFanctionalityPositive() {
+		
+		extentLogger = report.createTest("Verify search funtionality positive test");
 		mainPage= new HealthDataMainPage();
 		mainPage.searchField.sendKeys("Health");
 		mainPage.searchButton.click();

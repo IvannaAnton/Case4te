@@ -11,6 +11,7 @@ public class TC017 extends TestBase {
 	
 	@Test
 	public void canNotAutomateTest17() {
+		extentLogger = report.createTest("Funtionality cannot be automated test case 17");
 		assertTrue(Driver.getDriver().getCurrentUrl().contains("www.healthdata.gov"));
 	}
 }

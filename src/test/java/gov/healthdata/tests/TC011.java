@@ -13,6 +13,7 @@ public class TC011 extends TestBase {
 	HealthDataSearchResultPage resultPage;
 	@Test 
 	public void VerifyTheResultMatchFilterTopicResult(){
+		extentLogger = report.createTest("Verify the result match filter topic result ");
 	    mainPage =  new HealthDataMainPage();
 	    resultPage = new HealthDataSearchResultPage();
 		mainPage.searchField.sendKeys("health"+Keys.ENTER);

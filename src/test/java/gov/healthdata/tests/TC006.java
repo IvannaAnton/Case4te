@@ -16,6 +16,7 @@ public class TC006 extends TestBase {
 	@Test
 	public void verifyingTheMaximumCapacityOfTheCharactersInTheSearchBox() {
 		
+		extentLogger = report.createTest("Verify the maximun capacity of the character in the searchbox");
 		mainPage = new HealthDataMainPage();
 		
 		int maxLetters=128;
