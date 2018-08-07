@@ -12,7 +12,7 @@ public class TC015 extends TestBase{
 	HealthDataMainPage healthDataMainPage;
 	@Test( groups= {"smoke"})
 	public void TryPressingEnterKkeyInsteadOfClickingSearchButton() {
-		
+		extentLogger = report.createTest("Verify clicking funtionality in searchbutton");
 		driver.get(ConfigurationReader.getProperty("url"));
 		Assert.assertEquals(driver.getTitle(), "HealthData.gov");
 		

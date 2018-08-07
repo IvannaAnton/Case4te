@@ -13,7 +13,9 @@ public class TC007 extends TestBase {
     HealthDataSearchResultPage resultPage ;
     @Test 
     public void VerifyThatSearchBoxAcceptsCopyPasteCharacters(){
-         mainPage =  new HealthDataMainPage();
+    	
+        extentLogger = report.createTest("Verify that searchbox accepts copy paste characters");
+        mainPage =  new HealthDataMainPage();
         resultPage = new HealthDataSearchResultPage();
         String expected = "health";
         mainPage.searchField.sendKeys(expected+Keys.ENTER);

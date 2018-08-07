@@ -20,6 +20,8 @@ public class TC003 extends TestBase {
 	
 	@Test( groups= {"smoke"})
 	public void searchFanctionalityPositive() {
+		
+		extentLogger = report.createTest("Verify search funtionality");
 		mainPage= new HealthDataMainPage();
 		assertTrue(Driver.getDriver().getCurrentUrl().contains("www.healthdata.gov"));
 		mainPage.searchField.sendKeys("Health");

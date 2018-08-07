@@ -11,7 +11,8 @@ public class TC010 extends TestBase {
 
 	@Test
 	public void maximumVisibilityOfTheCharactersInTheSearchBox() {
-
+		
+		extentLogger = report.createTest("Verify maximum visibility of the character in the searchbox ");
 		mainPage = new HealthDataMainPage();
 		
 		int fourteenLetter=14;

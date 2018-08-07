@@ -13,6 +13,8 @@ public class TC012 extends TestBase {
 
 	@Test
 	public void VerifyTheResultMatchFiltertTopic() {
+		
+		extentLogger = report.createTest("Verify the result match filter topic");
 		//1 Go to www.healthdata.gov URL.
 		driver.get(ConfigurationReader.getProperty("url"));
 		Assert.assertEquals(driver.getTitle(), "HealthData.gov");

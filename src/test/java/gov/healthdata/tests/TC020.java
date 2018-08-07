@@ -14,6 +14,7 @@ public class TC020 extends TestBase {
 
 	@Test
 	public void incorrectDataSearch() {
+		extentLogger = report.createTest("Incorrect Data Search");
 		assertTrue(Driver.getDriver().getTitle().contains("HealthData.gov"));
 		healthDataMainPage = new HealthDataMainPage();
 		healthDataMainPage.searchField.sendKeys("halth");

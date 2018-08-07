@@ -15,10 +15,10 @@ public class TC014 extends TestBase {
 	HealthDataMainPage hdMainPage;
 	HealthDataSearchResultPage searchPage;
 	@Test
-	public void verifySearchFunyionalityTest() {
+	public void verifySearchFuntionalityTest() {
 		
 		
-		
+		extentLogger = report.createTest("Verify search funtionality test");
 		assertTrue(Driver.getDriver().getCurrentUrl().contains("www.healthdata.gov"));
 	    hdMainPage = new HealthDataMainPage();
 		hdMainPage.searchField.sendKeys("zxcvbnsdfghj");
